@@ -1,24 +1,6 @@
+/* Базові стилі для мобільних пристроїв (320px) – Mobile First */
 
-
-
-
-
-
-
-
-
-/* Основні (базові) стилі для мобільних пристроїв (320px) */
-
-/* Забезпечення коректного box-sizing та відсутності зовнішніх відступів */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Заборона горизонтального прокручування */
+/* Заборона горизонтальної прокрутки */
 html,
 body {
   overflow-x: hidden;
@@ -31,16 +13,33 @@ body {
   color: #333;
 }
 
-/* Зображення – адаптивні */
+/* Контейнер */
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* Адаптивні зображення */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Контейнер для вирівнювання контенту */
-.container {
-  padding: 0 16px;
-  margin: 0 auto;
+/* Список меню – відображається в один стовпець */
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+}
+
+/* Інші списки (послуг, команди, портфоліо) – в один стовпець */
+.services-list,
+.team-list,
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* Header та навігація */
@@ -51,18 +50,34 @@ img {
 
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
 }
 
-/* Мобільне меню – розмічено та оформлено */
-/* (За умовчанням приховано, показується при додаванні класу .is-open) */
+/* Hero секція з фоновим зображенням */
+.hero {
+  text-align: center;
+  padding: 40px 16px;
+  background: url('./images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Секції для послуг, команди, портфоліо */
+.services,
+.team,
+.portfolio {
+  padding: 40px 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 32px 16px;
+}
+
+/* Мобільне меню (за умовчанням приховано, показується при додаванні класу .is-open) */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -86,109 +101,107 @@ img {
   gap: 24px;
 }
 
-/* Hero секція */
-.hero {
-  text-align: center;
-  padding: 40px 16px;
-  /* Фонове зображення – адаптивне */
-  background: url('./images/hero-bg.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-/* Секції послуг, команди, портфоліо */
-.services,
-.team,
-.portfolio {
-  padding: 40px 16px;
-}
-
-/* Footer */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 32px 16px;
-}
-
-/* Форма підписки */
-.form-container {
-  margin: 16px 0;
-}
-
-/* Кнопка для мобільного меню (якщо передбачено) */
-.mobile-menu-toggle {
-  display: inline-block;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Адаптивні фонові зображення для екранів з високою щільністю (x2) */
+/* Адаптивні фонові зображення для дисплеїв з високою щільністю */
 @media only screen and (min-resolution: 192dpi) {
   .hero {
     background-image: url('./images/hero-bg@2x.jpg');
   }
 }
 
-/* Точка перелому: 768px */
+/* Медіа-запити для екранів від 768px */
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 
-  .header {
-    padding: 24px 32px;
-  }
-
-  .hero {
-    padding: 60px 32px;
-  }
-
-  .services,
-  .team,
-  .portfolio {
-    padding: 60px 32px;
-  }
-
-  .footer {
-    padding: 40px 32px;
-  }
-
-  /* Переструктурування навігації для планшетів */
+  /* У верхній навігації перемикаємо напрямок на ряд */
   .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Меню – розташування в ряд */
+  .menu {
     flex-direction: row;
   }
 
-  /* Пристрої з шириною >=768px зазвичай не потребують мобільного меню */
+  /* Списки секцій можуть бути відображені як сітка або у ряд */
+  .services-list,
+  .team-list,
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+  }
+
+  .header,
+  .hero,
+  .services,
+  .team,
+  .portfolio,
+  .footer {
+    padding: 60px 32px;
+  }
+
+  /* Кнопка мобільного меню зазвичай прихована */
   .mobile-menu-toggle {
     display: none;
   }
 }
 
-/* Точка перелому: 1158px */
+/* Медіа-запити для екранів від 1158px */
 @media (min-width: 1158px) {
   .container {
     max-width: 1158px;
   }
 
-  .header {
-    padding: 24px 64px;
-  }
-
-  .hero {
-    padding: 80px 64px;
-  }
-
+  .header,
+  .hero,
   .services,
   .team,
-  .portfolio {
+  .portfolio,
+  .footer {
     padding: 80px 64px;
   }
-
-  .footer {
-    padding: 48px 64px;
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
