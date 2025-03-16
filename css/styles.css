@@ -826,20 +826,56 @@ form-textarea
 
 
 
-
 @media screen and (max-width: 320px) {
-  /* Загальні налаштування */
-  body {
-    font-size: 14px;
-    line-height: 1.4;
+  /* Прибираємо блоки icon-container */
+  .icon-container {
+    display: none;
   }
+  
+  /* Адаптація футера */
+  .footer {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-logo {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+  .footer-text {
+    font-size: 14px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer-social {
+    margin: 0 0 10px 0;
+  }
+  .footer-social ul {
+    justify-content: center;
+  }
+  .social-item {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Зміна розмірів зображень для блоків */
+  .team-member img,
+  .portfolio-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Інші загальні налаштування для мобільного вигляду */
   .container {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
   }
-
-  /* Хедер */
+  
   .header-container {
     flex-direction: column;
     align-items: center;
@@ -867,8 +903,8 @@ form-textarea
     gap: 5px;
     text-align: center;
   }
-
-  /* Секція Hero */
+  
+  /* Hero-секція */
   .hero {
     padding: 100px 0;
     background-size: cover;
@@ -885,7 +921,7 @@ form-textarea
     font-size: 14px;
     padding: 0 10px;
   }
-
+  
   /* Секція Services */
   .services {
     padding: 60px 0;
@@ -898,31 +934,13 @@ form-textarea
     width: 100%;
     text-align: center;
   }
-  .icon-container {
-    height: 80px;
-    margin-bottom: 10px;
-  }
   .services-title {
     font-size: 18px;
   }
   .services-desc {
     font-size: 14px;
   }
-
-  /* Секція Features (якщо використовується) */
-  .features {
-    padding: 60px 0;
-  }
-  .features-list {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .features-item {
-    text-align: center;
-    font-size: 14px;
-  }
-
+  
   /* Секція Team */
   .team {
     padding: 60px 0;
@@ -948,10 +966,7 @@ form-textarea
   .team-role {
     font-size: 14px;
   }
-  .team-info .social-list {
-    margin-top: 10px;
-  }
-
+  
   /* Секція Portfolio */
   .portfolio {
     padding: 60px 0;
@@ -981,38 +996,7 @@ form-textarea
     padding: 20px 16px;
     font-size: 14px;
   }
-
-  /* Футер */
-  .footer {
-    padding: 60px 0;
-    text-align: center;
-  }
-  .footer .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-logo {
-    font-size: 16px;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .footer-text {
-    font-size: 14px;
-    max-width: 100%;
-    margin: 0 auto 10px;
-  }
-  .footer-social {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .footer-social ul {
-    justify-content: center;
-  }
-  .social-item {
-    width: 32px;
-    height: 32px;
-  }
-
+  
   /* Модальне вікно */
   .modal-window {
     width: 90%;
@@ -1042,12 +1026,6 @@ form-textarea
     font-size: 14px;
   }
 }
-
-
-
-
-
-
 
 
 
