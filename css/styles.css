@@ -1,135 +1,174 @@
 @media screen and (max-width: 320px) {
-  /* Загальні налаштування */
-  body {
-    font-size: 14px;
-    line-height: 1.4;
-  }
+  /* Контейнер */
   .container {
     width: 100%;
     padding: 0 10px;
   }
-
+  
   /* Хедер */
   .header-container {
     flex-direction: column;
     align-items: center;
+    padding: 10px 0;
   }
   .nav {
     flex-direction: column;
     align-items: center;
   }
+  .logo {
+    margin-right: 0;
+    font-size: 16px;
+  }
   .menu {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
-  .menu-item {
-    margin: 5px 0;
+  .menu-link {
+    padding: 12px 0;
+    font-size: 14px;
   }
-  .address {
+  .contacts {
+    flex-direction: column;
+    gap: 5px;
     text-align: center;
-    margin-top: 10px;
   }
-
-  /* Головна секція */
+  
+  /* Секція hero */
+  .hero {
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+  }
   .hero-title {
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 28px;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
   .hero-button {
+    min-width: auto;
+    height: 40px;
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 0 10px;
   }
-
-  /* Секція послуг */
+  
+  /* Секція services */
+  .services {
+    padding: 60px 0;
+  }
   .services-list {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
   .services-item {
-    margin-bottom: 20px;
+    width: 100%;
     text-align: center;
   }
   .icon-container {
+    height: 80px;
     margin-bottom: 10px;
   }
-
-  /* Секція команди */
+  .services-title {
+    font-size: 18px;
+  }
+  .services-desc {
+    font-size: 14px;
+  }
+  
+  /* Секція team */
+  .team {
+    padding: 60px 0;
+  }
+  .team-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
   .team-list {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
   .team-member {
-    margin-bottom: 20px;
+    width: 100%;
   }
   .team-info {
+    padding: 16px 0;
+  }
+  
+  /* Секція portfolio */
+  .portfolio {
+    padding: 60px 0;
+  }
+  .portfolio-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .portfolio-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .portfolio-item {
+    width: 100%;
+  }
+  .portfolio-info {
+    padding: 16px;
+  }
+  .overlay-text {
+    padding: 20px 16px;
+    font-size: 14px;
+  }
+  
+  /* Футер */
+  .footer {
+    padding: 60px 0;
     text-align: center;
   }
-
-  /* Портфоліо */
-  .portfolio-list {
+  .footer .container {
     flex-direction: column;
     align-items: center;
   }
-  .portfolio-item {
+  .footer-content {
+    margin-right: 0;
     margin-bottom: 20px;
   }
-  .img-container img {
-    width: 100%;
-    height: auto;
-  }
-  .overlay-text {
-    font-size: 12px;
-  }
-  .portfolio-info {
-    text-align: center;
-  }
-
-  /* Футер */
-  .footer {
-    text-align: center;
-    padding: 20px 10px;
-  }
-  .footer-content,
   .footer-social {
-    margin-bottom: 10px;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  .social-list {
+  .footer-logo {
+    margin-right: 0;
+    font-size: 16px;
+  }
+  .footer-text {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .footer-social ul {
     justify-content: center;
   }
-
-  /* Форма підписки */
-  .form-container {
-    margin: 20px auto 0;
-    width: 100%;
-    max-width: 300px;
-  }
-  .email-input {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px;
-  }
-  .subscribe-btn {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px;
-  }
-
+  
   /* Модальне вікно */
   .modal-window {
     width: 90%;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 40px 16px;
+    min-height: auto;
   }
-  .form-group {
-    margin-bottom: 15px;
+  .modal-close {
+    top: 16px;
+    right: 16px;
+  }
+  .modal-info {
+    font-size: 14px;
   }
   .form-input,
   .form-textarea {
-    width: 100%;
+    font-size: 14px;
+  }
+  .form-submit {
+    min-width: auto;
+    height: 40px;
     font-size: 14px;
   }
 }
+
 
 
 
