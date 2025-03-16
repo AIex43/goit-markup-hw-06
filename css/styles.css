@@ -1,80 +1,241 @@
-@media (max-width: 320px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+/* Основні (базові) стилі для мобільних пристроїв (320px) */
 
-  .header-container,
-  .nav,
-  .menu,
-  .contacts,
-  .hero,
-  .services-list,
-  .team-list,
-  .portfolio-list,
-  .footer {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
+/* Забезпечення коректного box-sizing та відсутності зовнішніх відступів */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Мобільні стилі (320px) – всі списки у вигляді колонки */
+.menu,
+.services-list,
+.team-list,
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-  .menu {
-    padding: 0;
-  }
+.menu li,
+.services-list li,
+.team-list li,
+.portfolio-list li {
+  width: 100%;
+}
 
-  .menu-item {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-  }
+/* Заборона горизонтального прокручування */
+html,
+body {
+  overflow-x: hidden;
+}
 
-  .contact-item {
-    margin-bottom: 10px;
-  }
+/* Глобальні стилі */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
 
-  .hero-button {
-    width: 100%;
-    max-width: 200px;
-  }
+/* Зображення – адаптивні */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  .services-item {
-    width: 100%;
-  }
+/* Контейнер для вирівнювання контенту */
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+}
 
-  .team-member {
-    width: 100%;
-    text-align: center;
-  }
+/* Header та навігація */
+.header {
+  background-color: #fff;
+  padding: 16px;
+}
 
-  .portfolio-item {
-    width: 100%;
-  }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .footer-content,
-  .footer-social,
-  .form-container {
-    width: 100%;
-    text-align: center;
-  }
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
 
-  .subscribe-form {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
+/* Мобільне меню – розмічено та оформлено */
+/* (За умовчанням приховано, показується при додаванні класу .is-open) */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .email-input {
-    width: 100%;
-    max-width: 250px;
-  }
+.mobile-menu.is-open {
+  display: flex;
+}
 
-  .subscribe-btn {
-    width: 100%;
-    max-width: 200px;
+.mobile-menu .menu {
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Hero секція */
+.hero {
+  text-align: center;
+  padding: 40px 16px;
+  /* Фонове зображення – адаптивне */
+  background: url('./images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Секції послуг, команди, портфоліо */
+.services,
+.team,
+.portfolio {
+  padding: 40px 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 32px 16px;
+}
+
+/* Форма підписки */
+.form-container {
+  margin: 16px 0;
+}
+
+/* Кнопка для мобільного меню (якщо передбачено) */
+.mobile-menu-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Адаптивні фонові зображення для екранів з високою щільністю (x2) */
+@media only screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url('./images/hero-bg@2x.jpg');
   }
 }
+
+/* Точка перелому: 768px */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .header {
+    padding: 24px 32px;
+  }
+
+  .hero {
+    padding: 60px 32px;
+  }
+
+  .services,
+  .team,
+  .portfolio {
+    padding: 60px 32px;
+  }
+
+  .footer {
+    padding: 40px 32px;
+  }
+
+  /* Переструктурування навігації для планшетів */
+  .nav {
+    flex-direction: row;
+  }
+
+  /* Пристрої з шириною >=768px зазвичай не потребують мобільного меню */
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+/* Точка перелому: 1158px */
+@media (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .header {
+    padding: 24px 64px;
+  }
+
+  .hero {
+    padding: 80px 64px;
+  }
+
+  .services,
+  .team,
+  .portfolio {
+    padding: 80px 64px;
+  }
+
+  .footer {
+    padding: 48px 64px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
