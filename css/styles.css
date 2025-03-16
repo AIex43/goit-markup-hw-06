@@ -1,173 +1,80 @@
-/* Базові стилі для мобільних пристроїв (320px) – Mobile First */
-
-/* Заборона горизонтальної прокрутки */
-html,
-body {
-  overflow-x: hidden;
-}
-
-/* Глобальні стилі */
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  color: #333;
-}
-
-/* Контейнер */
-.container {
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
-/* Адаптивні зображення */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Список меню – відображається в один стовпець */
-.menu {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  gap: 16px;
-}
-
-/* Інші списки (послуг, команди, портфоліо) – в один стовпець */
-.services-list,
-.team-list,
-.portfolio-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* Header та навігація */
-.header {
-  background-color: #fff;
-  padding: 16px;
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-/* Hero секція з фоновим зображенням */
-.hero {
-  text-align: center;
-  padding: 40px 16px;
-  background: url('./images/hero-bg.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-/* Секції для послуг, команди, портфоліо */
-.services,
-.team,
-.portfolio {
-  padding: 40px 16px;
-}
-
-/* Footer */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 32px 16px;
-}
-
-/* Мобільне меню (за умовчанням приховано, показується при додаванні класу .is-open) */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 1000;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-menu.is-open {
-  display: flex;
-}
-
-.mobile-menu .menu {
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Адаптивні фонові зображення для дисплеїв з високою щільністю */
-@media only screen and (min-resolution: 192dpi) {
-  .hero {
-    background-image: url('./images/hero-bg@2x.jpg');
-  }
-}
-
-/* Медіа-запити для екранів від 768px */
-@media (min-width: 768px) {
+@media (max-width: 320px) {
   .container {
-    max-width: 720px;
-  }
-
-  /* У верхній навігації перемикаємо напрямок на ряд */
-  .nav {
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
-  /* Меню – розташування в ряд */
-  .menu {
-    flex-direction: row;
-  }
-
-  /* Списки секцій можуть бути відображені як сітка або у ряд */
+  .header-container,
+  .nav,
+  .menu,
+  .contacts,
+  .hero,
   .services-list,
   .team-list,
-  .portfolio-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: space-between;
-  }
-
-  .header,
-  .hero,
-  .services,
-  .team,
-  .portfolio,
+  .portfolio-list,
   .footer {
-    padding: 60px 32px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
-  /* Кнопка мобільного меню зазвичай прихована */
-  .mobile-menu-toggle {
-    display: none;
+  .menu {
+    padding: 0;
+  }
+
+  .menu-item {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .contact-item {
+    margin-bottom: 10px;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .services-item {
+    width: 100%;
+  }
+
+  .team-member {
+    width: 100%;
+    text-align: center;
+  }
+
+  .portfolio-item {
+    width: 100%;
+  }
+
+  .footer-content,
+  .footer-social,
+  .form-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .email-input {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+    max-width: 200px;
   }
 }
-
-/* Медіа-запити для екранів від 1158px */
-@media (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-  }
-
-  .header,
-  .hero,
-  .services,
-  .team,
-  .portfolio,
-  .footer {
-    padding: 80px 64px;
-  }
-}
-
-
 
 
 
