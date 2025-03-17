@@ -13,7 +13,6 @@ html, body {
 
 
 * {
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -801,7 +800,6 @@ form-textarea
   }
   /* Адаптація футера */
   .footer {
-    padding: 96px;
     text-align: center;
   }
   .footer .container {
@@ -1043,7 +1041,9 @@ form-textarea
   }
   
 
-
+.mobile-nav a {
+  
+}
 
 
 
