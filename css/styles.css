@@ -1206,7 +1206,7 @@ form-textarea
 @media screen and (min-width: 321px) and (max-width: 768px) {
   /* Загальні налаштування */
   .container {
-    width: 90%;
+    width: 80%;
     padding: 0 20px;
     margin: 0 auto;
   }
