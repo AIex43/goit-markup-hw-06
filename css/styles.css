@@ -203,7 +203,7 @@ img {
   background-position: center;
   background-size: cover;
   text-align: center;
-  padding: 250px 0;
+  padding: 188px 0;
   color: white;
 }
 
@@ -237,7 +237,8 @@ img {
 
 /* Секція services */
 .services {
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .services-list {
@@ -344,7 +345,7 @@ img {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  text-align: center;
+  
 }
 
 .portfolio-name {
@@ -800,7 +801,7 @@ form-textarea
   }
   /* Адаптація футера */
   .footer {
-    padding: 60px 20px;
+    padding: 96px;
     text-align: center;
   }
   .footer .container {
@@ -818,7 +819,7 @@ form-textarea
     text-align: left;
   }
   .footer-social {
-    margin: 122px 0 10px 0;
+    margin: 72px 0 0 0;
   }
   .footer-social ul {
     justify-content: center;
@@ -837,7 +838,7 @@ form-textarea
 }
 
 .form-container {
-  margin-top: 122px;
+  margin-top: 72px;
   margin-left: 0px;
   align-content: center;
 }
@@ -848,19 +849,21 @@ form-textarea
 
 }
 
-  /* Зміна розмірів зображень для блоків */
-  .team-member img,
-  .portfolio-item img {
-    width: 100%;
-    height: auto;
-  }
-  
+
   /* Інші загальні налаштування для мобільного вигляду */
   .container {
     width: 100%;
     padding: 0 10px;
+    padding-left:16px;
+    padding-right:16px;
     margin: 0 auto;
   }
+
+.section team .container {
+  width:296px;
+}
+
+
   
   .header-container {
     align-items: center;
@@ -891,12 +894,12 @@ form-textarea
   
   /* Hero-секція */
   .hero {
-    padding: 150px 0;
+    padding: 72px 0;
     background-size: cover;
     background-position: center;
   }
   .hero-title {
-    font-size: 28px;
+    font-size: 36px;
     max-width: 50%;
     margin-bottom: 20px;
   }
@@ -909,7 +912,8 @@ form-textarea
   
   /* Секція Services */
   .services {
-    padding: 60px 0;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .services-list {
     flex-direction: column;
@@ -982,7 +986,7 @@ form-textarea
     margin-bottom: 20px;
   }
   .portfolio-info {
-    padding: 16px;
+   padding: 32px 16px;
   }
   .portfolio-name {
     font-size: 18px;
@@ -1138,7 +1142,10 @@ form-textarea
   list-style: none;
   padding: 0;
   display: flex;
-  margin-top: 150px;
+  margin-top: 48px;
+}
+.mobile-contact {
+  margin-top:auto;
 }
 
 .social-link {
@@ -1172,7 +1179,7 @@ form-textarea
 
 
 
-@media screen and (min-width: 321px) and (max-width: 720px) {
+@media screen and (min-width: 321px) and (max-width: 768px) {
   /* Загальні налаштування */
   .container {
     width: 90%;
@@ -1227,7 +1234,8 @@ form-textarea
   }
   /* Секція Services */
   .services {
-    padding: 100px 0;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .services-list {
     display: flex;
@@ -1306,7 +1314,7 @@ form-textarea
     margin-bottom: 20px;
   }
   .portfolio-info {
-    padding: 20px;
+    padding: 32px 16px;
   }
   .portfolio-name {
     font-size: 20px;
@@ -1359,8 +1367,6 @@ form-textarea
 
 .team-member img,
 .portfolio-item img {
-  width: 100%;
-  height: auto;
   object-fit: cover;
 }
 }
