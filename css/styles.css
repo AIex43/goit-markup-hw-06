@@ -795,7 +795,7 @@ form-textarea
 
 
 .hero {
-  background-image: url('images/t/Dark-bg.jpg');
+ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/t/Dark-bg.jpg');
 }
 
 
