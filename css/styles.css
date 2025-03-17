@@ -792,6 +792,24 @@ form-textarea
 
 @media screen and (max-width: 320px) {
   /* Прибираємо блоки icon-container */
+
+
+.hero {
+  background-image: url('images/t/Dark-bg.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
 .aaa {
    color:#404BBF;
 }
