@@ -792,6 +792,10 @@ form-textarea
 
 @media screen and (max-width: 320px) {
   /* Прибираємо блоки icon-container */
+.aaa {
+   color:#404BBF;
+}
+  
   .icon-container {
     display: none;
   }
