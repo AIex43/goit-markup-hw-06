@@ -799,7 +799,9 @@ form-textarea
 }
 
 
-
+.social-list {
+    gap: 15px;
+}
 
 
 
@@ -920,7 +922,7 @@ form-textarea
   }
   .hero-title {
     font-size: 36px;
-    max-width: 50%;
+    max-width: 60%;
     margin-bottom: 20px;
   }
   .hero-button {
