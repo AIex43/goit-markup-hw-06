@@ -872,7 +872,7 @@ form-textarea
 
   /* Інші загальні налаштування для мобільного вигляду */
   .container {
-    width: 100%;
+    width: 296px;
     padding: 0 10px;
     padding-left:16px;
     padding-right:16px;
