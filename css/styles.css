@@ -1411,5 +1411,6 @@ img {
 .team-member img,
 .portfolio-item img {
   object-fit: cover;
+   width: 100%;
 }
 }
