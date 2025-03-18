@@ -457,7 +457,7 @@ img {
 .footer .container {
   display: flex;
   align-items: baseline;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .footer-logo {
