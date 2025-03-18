@@ -11,6 +11,9 @@ html, body {
 
 
 
+.email-input {
+  width:288px;
+}
 
 * {
   box-sizing: border-box;
