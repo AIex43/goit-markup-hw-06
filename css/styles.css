@@ -1215,7 +1215,9 @@ form-textarea
 }
 
 
-
+.team-member src {
+  width:100%;
+}
 
 
 
@@ -1223,7 +1225,7 @@ form-textarea
   
   /* Загальні налаштування */
   .container {
-    width: 80%;
+    width: 90%;
     padding: 0 20px;
     margin: 0 auto;
   }
@@ -1390,7 +1392,7 @@ form-textarea
   .footer-social ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
   }
   .social-item {
     width: 40px;
